@@ -8,7 +8,7 @@ class NavigationBar extends React.Component {
             <Navbar bg="dark" variant="dark" expand="lg">
                 <Navbar.Brand as={Link} to="/">
                     <img
-                        src="https://upload.wikimedia.org/wikipedia/commons/1/17/Tata_Tamo_Racemo.jpg"
+                        src="https://cdn5.vectorstock.com/i/1000x1000/96/49/panda-icon-logo-design-template-vector-30219649.jpg"
                         width="25"
                         height="25"
                         alt="Car logo"
