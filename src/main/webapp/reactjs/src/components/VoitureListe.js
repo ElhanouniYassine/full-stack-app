@@ -19,6 +19,17 @@ export default class VoitureListe extends Component {
             });
     }
 
+    deleteVoiture = (voitureId)=>{
+        axios.delete(`http://localhost:8080/api/voitures/${voitureId}`)
+            .then(response=>{
+                if(response.data != null){
+                    alert("Voiture supprimée avec succès.");
+                    this.setState({
+                        voitures:this.state.voitures.filter(voiture => voiture.id !== voitureId)
+                    })
+                }
+            })
+    }
     render() {
         return (
             <Card className="border border-dark bg-dark text-white">
@@ -57,7 +68,7 @@ export default class VoitureListe extends Component {
                                         <td>
                                             <ButtonGroup>
                                                 <Button size="sm" variant="outline-primary"><FontAwesomeIcon icon={faEdit}/> </Button>{' '}
-                                                <Button size="sm" variant="outline-primary"><FontAwesomeIcon icon={faTrash}/> </Button>
+                                                <Button size="sm" variant="outline-primary" onClick={this.deleteVoiture.bind(this,voiture.id)}><FontAwesomeIcon icon={faTrash}/> </Button>
                                             </ButtonGroup>
                                         </td>
 
