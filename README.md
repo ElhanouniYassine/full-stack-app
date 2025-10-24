@@ -11,9 +11,8 @@ A complete full-stack application featuring React frontend, Spring Boot backend,
 ### Run the Application
 
 ```bash
-git clone https://github.com/omar-ababou/full-stack-app.git
+git clone https://github.com/ElhanouniYassine/full-stack-app.git
 cd full-stack-app
-git checkout omar-docker-setup
 docker-compose up --build
 ```
 
